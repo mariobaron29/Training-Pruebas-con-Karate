@@ -1,0 +1,7 @@
+Feature: Payments scenarios
+
+Scenario: Test list of payments response
+Given url 'https://run.mocky.io/v3/902cabc0-1f4d-437f-b63f-2a5a1fe0b81a'
+When method GET
+Then status 200
+And match $ contains {id : '#notnull'}
